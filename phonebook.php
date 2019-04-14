@@ -3,11 +3,10 @@
 require ("db.php");
 
 
-$dbh=conectDb();
-if(!$dbh){
-    mysqli_close($dbh);
-    die("No conection" .mysqli_error());
+$dbh=connectDb();
 
+if(!$dbh){
+    die("No conection" .mysqli_error());
 }
 
 if(!mysqli_select_db($dbh,"phone_book")){
